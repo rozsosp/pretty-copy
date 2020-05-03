@@ -15,8 +15,8 @@ const copy = url => {
 
 chrome.contextMenus.create(contextMenuItem);
 
-chrome.contextMenus.onClicked.addListener((data) => {
-  if (data.menuItemId === contextMenuItem.id) {
-    copy(data.pageUrl);
+chrome.contextMenus.onClicked.addListener(({menuItemId, pageUrl}) => {
+  if (menuItemId === contextMenuItem.id) {
+    copy(pageUrl);
   }
 });
