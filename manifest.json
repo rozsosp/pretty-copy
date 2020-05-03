@@ -2,5 +2,12 @@
   "name": "Pretty Copy",
   "version" : "1.0",
   "description": "Pretty Copy current urls",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
   "manifest_version": 2
 }
