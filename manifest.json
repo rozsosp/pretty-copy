@@ -3,7 +3,17 @@
   "version" : "1.0",
   "description": "Pretty Copy current urls",
   "browser_action": {
+    "default_icon": {
+      "16": "img/pretty16.png",
+      "48": "img/pretty48.png",
+      "128": "img/pretty128.png" 
+    },
     "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/pretty16.png",
+    "48": "img/pretty48.png",
+   "128": "img/pretty128.png"
   },
   "permissions": [
     "activeTab",
