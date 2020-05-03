@@ -1,6 +1,6 @@
 const contextMenuItem = {
   id: "copyText",
-  title: "Copy Current Page URL in the pretty way",
+  title: "Pretty Copy the current URL",
   contexts: ["all"]
 };
 
