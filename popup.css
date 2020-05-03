@@ -2,20 +2,20 @@ body {
   width: 200px;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
+  text-align: center;
 }
 
 .header {
   font-size: 1rem;
-  text-align: center;
   font-weight: normal;
 }
 
-.content {
+.input-container {
   padding: 10px 0;
   background-color: #eee;
   width: 100%;
-  text-align: center;
   border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
 }
 
 .input{
