@@ -20,7 +20,8 @@
     "tabs",
     "contextMenus",
     "clipboardWrite",
-    "clipboardRead"
+    "clipboardRead",
+    "storage"
   ],
   "background": {
     "scripts": ["background.js"],

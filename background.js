@@ -13,10 +13,14 @@ const copy = url => {
   document.body.removeChild(textArea);
 } 
 
+
 chrome.contextMenus.create(contextMenuItem);
 
 chrome.contextMenus.onClicked.addListener(({menuItemId, pageUrl}) => {
   if (menuItemId === contextMenuItem.id) {
-    copy(pageUrl);
+    chrome.storage.local.get(['prefix', 'postfix'], ({prefix,postfix}) => {
+      const url = `${prefix} ${pageUrl} ${postfix}`;
+      copy(url);
+    });
   }
 });
