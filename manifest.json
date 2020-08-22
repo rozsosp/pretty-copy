@@ -8,7 +8,7 @@
       "48": "img/pretty48.png",
       "128": "img/pretty128.png" 
     },
-    "default_popup": "popup.html"
+    "default_popup": "src/popup/index.html"
   },
   "icons": {
     "16": "img/pretty16.png",
@@ -24,7 +24,7 @@
     "storage"
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["src/background.js"],
     "persistent": false
   },
   "manifest_version": 2
