@@ -1,8 +1,10 @@
 body {
-  width: 200px;
+  width: 250px;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   text-align: center;
+  background-color: #313131;
+  color: white;
 }
 
 .header {
@@ -12,25 +14,28 @@ body {
 
 .input-container {
   padding: 10px 0;
-  background-color: #eee;
+  background-color: #1c1c1c;
   width: 100%;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
 }
 
-.input{
+.input {
   margin: 5px;
   border-radius: 5px;
   border: 1px solid #AAA;
   font-size: 16px;
   padding: 5px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
 .button {
   margin: 10px 5px;
   border-radius: 5px;
-  border: 1px solid #AAA;
+  border: 0;
   font-size: 14px;
-  padding: 5px;
+  padding: 5px 10px;
   cursor: pointer;
+  color: white;
+  background-color: #89D1FE;
 }
