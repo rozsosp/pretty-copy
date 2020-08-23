@@ -7,23 +7,29 @@ const load = (type = []) => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  load(['prefix','postfix']);
-
-  const checkPageButton = document.getElementById('checkPage');
-  checkPageButton.addEventListener('click', () => {
-    chrome.tabs.query({active: true, lastFocusedWindow: true}, async tabs => {
-      const url = tabs[0].url;
-      const prefix = document.getElementById('prefix')?.value;
-      const postfix = document.getElementById('postfix')?.value;
-      await navigator.clipboard.writeText(`${prefix} ${url} ${postfix}`);
-    });
-  }, false);
-
-  const saveButton = document.getElementById('save');
-  saveButton.addEventListener('click', () => {
+const handleCopy = () => {
+  chrome.tabs.query({active: true, lastFocusedWindow: true}, async tabs => {
+    const url = tabs[0].url;
     const prefix = document.getElementById('prefix')?.value;
     const postfix = document.getElementById('postfix')?.value;
-    chrome.storage.local.set({prefix, postfix});
-  }, false);
-}, false);
+    await navigator.clipboard.writeText(`${prefix} ${url} ${postfix}`);
+  });
+};
+
+const handleSave = () => {
+  const prefix = document.getElementById('prefix')?.value;
+  const postfix = document.getElementById('postfix')?.value;
+  chrome.storage.local.set({prefix, postfix});
+};
+
+const initPopup = () => {
+  load(['prefix','postfix']);
+
+  const copyButton = document.getElementById('copyButton');
+  copyButton.addEventListener('click', handleCopy, false);
+
+  const saveButton = document.getElementById('saveButton');
+  saveButton.addEventListener('click', handleSave, false);
+};
+
+document.addEventListener('DOMContentLoaded', initPopup, false);
